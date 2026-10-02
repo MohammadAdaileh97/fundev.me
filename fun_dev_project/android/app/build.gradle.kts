@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.coderz.fun_dev_project"
-    compileSdk = 35
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

@@ -170,7 +170,7 @@ class _ItemDetScreenState extends State<ItemDetScreen> {
                       await context.read<FavCubit>().fav(
                         idItem: widget.itemEntity.id!,
                       );
-                      if (!mounted) return;
+                      if (!context.mounted) return;
 
                       context.read<GetItemsCubit>().changeFav(
                         idItem: widget.itemEntity.id!,
@@ -181,19 +181,6 @@ class _ItemDetScreenState extends State<ItemDetScreen> {
                         widget.itemEntity.isFavorite =
                             !widget.itemEntity.isFavorite!;
                       }
-
-                      // if (widget.fromFav) {
-                      //   if (widget.itemEntity.isFavorite!) {
-                      //     context.read<FavItemCubit>().changeFav(
-                      //       idItem: widget.itemEntity.id!,
-                      //     );
-                      //   } else {
-                      //     context.read<FavItemCubit>().fetchFavItems();
-                      //   }
-                      //
-                      //   widget.itemEntity.isFavorite =
-                      //       widget.itemEntity.isFavorite!;
-                      // }
 
                       setState(() {});
                     },
