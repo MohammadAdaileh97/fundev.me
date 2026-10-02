@@ -1,0 +1,9 @@
+{
+  "login": "تسجيل الدخول",
+  "email": "البريد الإلكتروني",
+  "enterValidEmail": "ادخل بريد إلكتروني صالح",
+  "password": "كلمة المرور",
+  "passwordIsRequired": "كلمة المرور مطلوبة",
+  "forgotYourPassword": "نسيت كلمة المرور؟",
+  "orLoginWithSocialAccount": "او قم بتسجيل الدخول باستخدام حساب"
+}
