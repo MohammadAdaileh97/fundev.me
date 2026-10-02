@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:theme_lang/l10n/app_localizations.dart';
 import 'package:theme_lang/view/widget/custom_button.dart';
 
 import '../../controller/note_controller.dart';
 import '../../utl/const_value.dart';
 import '../widget/custom_text_field.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AddNoteScreen extends StatelessWidget {
-  TextEditingController textEditingController = TextEditingController();
+  final TextEditingController textEditingController = TextEditingController();
+
+  AddNoteScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +63,7 @@ class AddNoteScreen extends StatelessWidget {
                   msg: textEditingController.text,
                   userId: userId,
                 );
+                if (!context.mounted) return;
                 Navigator.pop(context);
               },
             ),

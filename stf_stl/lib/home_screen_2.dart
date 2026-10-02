@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen2 extends StatefulWidget {
+  const HomeScreen2({super.key});
+
   @override
-  State<StatefulWidget> createState() {
-    return HomeScreen2State();
-  }
+  State<HomeScreen2> createState() => HomeScreen2State();
 }
 
 class HomeScreen2State extends State<HomeScreen2> {
@@ -17,11 +17,12 @@ class HomeScreen2State extends State<HomeScreen2> {
       body: Center(child: Text(i.toString())),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          i++;
-          setState(() {});
-          print(i);
+          setState(() {
+            i++;
+          });
+          debugPrint(i.toString());
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

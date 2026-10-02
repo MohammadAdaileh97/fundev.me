@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:theme_lang/l10n/app_localizations.dart';
 import 'package:theme_lang/model/note_model.dart';
 import 'package:theme_lang/view/widget/custom_button.dart';
 
 import '../../controller/note_controller.dart';
 import '../widget/custom_text_field.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class UpdateNoteScreen extends StatelessWidget {
-  TextEditingController textEditingController = TextEditingController();
-  NoteModel noteModel;
+  final TextEditingController textEditingController;
+  final NoteModel noteModel;
 
-  UpdateNoteScreen({super.key, required this.noteModel}) {
+  UpdateNoteScreen({super.key, required this.noteModel})
+    : textEditingController = TextEditingController() {
     textEditingController.text = noteModel.msg;
   }
 
@@ -64,6 +65,7 @@ class UpdateNoteScreen extends StatelessWidget {
                   msg: textEditingController.text,
                   id: noteModel.id,
                 );
+                if (!context.mounted) return;
                 Navigator.pop(context);
               },
             ),

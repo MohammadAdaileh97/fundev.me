@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:splash/drawer_screen.dart';
-import 'package:splash/splash_screen.dart';
-import 'package:splash/tabs_screen.dart';
 
 void main() {
   runApp(const MyApp());

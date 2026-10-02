@@ -1,4 +1,3 @@
-import '../../data/model/post_model.dart';
 import '../repostry/post_repostry.dart';
 
 class DeletePostUseCase {

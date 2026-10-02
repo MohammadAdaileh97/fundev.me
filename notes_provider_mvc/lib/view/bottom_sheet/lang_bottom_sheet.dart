@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:theme_lang/l10n/app_localizations.dart';
 import 'package:theme_lang/view/widget/custom_button.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../controller/lang_controller.dart';
 

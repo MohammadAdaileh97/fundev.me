@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:theme_lang/controller/auth_controller.dart';
+import 'package:theme_lang/l10n/app_localizations.dart';
 import 'package:theme_lang/view/screens/main_screen.dart';
 import 'package:theme_lang/view/screens/signup_screen.dart';
 import 'package:theme_lang/view/widget/custom_button.dart';
 import 'package:theme_lang/view/widget/custom_text_field.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../controller/note_controller.dart';
 import '../../utl/const_value.dart';
 
 class LoginScreen extends StatelessWidget {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -102,11 +104,13 @@ class LoginScreen extends StatelessWidget {
                           context,
                           listen: false,
                         ).getAllNotes(userId: userID);
+                        if (!context.mounted) return;
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => MainScreen()),
                         );
                       } else {
+                        if (!context.mounted) return;
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
@@ -131,6 +135,7 @@ class LoginScreen extends StatelessWidget {
                     onTap: () async {
                       authController.showErrorEmail = false;
                       authController.showErrorPassword = false;
+                      if (!context.mounted) return;
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => SignupScreen()),

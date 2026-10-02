@@ -4,6 +4,8 @@ import 'package:untitled/controller/db_controller.dart';
 class AddNoteScreen extends StatelessWidget {
   TextEditingController textEditingController = TextEditingController();
 
+  AddNoteScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

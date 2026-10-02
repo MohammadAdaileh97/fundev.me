@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   int i = 0;
 
   @override
@@ -10,10 +17,12 @@ class HomeScreen extends StatelessWidget {
       body: Center(child: Text(i.toString())),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          i++;
-          print(i);
+          setState(() {
+            i++;
+          });
+          debugPrint(i.toString());
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

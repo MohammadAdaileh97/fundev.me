@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gps/gps_screen.dart';
 import 'package:gps/map_screen.dart';
 
 void main() {

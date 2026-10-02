@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:theme_lang/l10n/app_localizations.dart';
 import 'package:theme_lang/view/widget/custom_button.dart';
 
 import '../../controller/auth_controller.dart';
 import '../widget/custom_text_field.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignupScreen extends StatelessWidget {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController confPasswordController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confPasswordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+
+  SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -143,6 +145,7 @@ class SignupScreen extends StatelessWidget {
                         email: emailController.text,
                         password: passwordController.text,
                       );
+                      if (!context.mounted) return;
                       Navigator.pop(context);
                     },
                   );

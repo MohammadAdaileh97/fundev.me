@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:theme_lang/controller/note_controller.dart';
 import 'package:theme_lang/controller/auth_controller.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:theme_lang/l10n/app_localizations.dart';
 import 'package:theme_lang/controller/theme_controller.dart';
 import 'package:theme_lang/view/screens/splash_screen.dart';
 

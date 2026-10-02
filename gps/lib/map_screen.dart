@@ -32,7 +32,7 @@ class _MapScreenState extends State<MapScreen> {
               showModalBottomSheet(
                 context: context,
                 builder: (context) {
-                  return Container(
+                  return SizedBox(
                     width: 500,
                     child: SingleChildScrollView(
                       child: Column(

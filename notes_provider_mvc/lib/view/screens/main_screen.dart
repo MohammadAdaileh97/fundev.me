@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:theme_lang/controller/note_controller.dart';
+import 'package:theme_lang/l10n/app_localizations.dart';
 import 'package:theme_lang/view/screens/add_note_screen.dart';
 import 'package:theme_lang/view/screens/setting_screen.dart';
 import 'package:theme_lang/view/widget/list_note_item.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});

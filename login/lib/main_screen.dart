@@ -4,7 +4,7 @@ class MainScreen extends StatelessWidget {
   String email;
   String password;
 
-  MainScreen({required this.email, required this.password});
+  MainScreen({super.key, required this.email, required this.password});
 
   @override
   Widget build(BuildContext context) {

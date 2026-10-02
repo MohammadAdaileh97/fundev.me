@@ -4,8 +4,6 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:theme_lang/utl/const_value.dart';
 
-import '../model/note_model.dart';
-
 class AuthController extends ChangeNotifier {
   late Database database;
   bool showErrorEmail = false;
