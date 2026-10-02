@@ -1,9 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fun_dev_project/features/auth/domain/use_case/forgot_password_use_case.dart';
-import 'package:fun_dev_project/features/auth/domain/use_case/login_use_case.dart';
 
 import '../state/forgot_password_state.dart';
-import '../state/login_state.dart';
 
 class ForgotPasswordCubit extends Cubit<ForgotPasswordState> {
   ForgotPasswordUseCase forgotPasswordUseCase;

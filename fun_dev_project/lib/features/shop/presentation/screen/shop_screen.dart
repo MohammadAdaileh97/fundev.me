@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fun_dev_project/core/utl/responsive.dart';
 import 'package:fun_dev_project/core/widget/custom_app_bar.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 import 'package:fun_dev_project/core/widget/custom_button.dart';
 import 'package:fun_dev_project/core/widget/custom_circular_progress_indicator.dart';
 import 'package:fun_dev_project/core/widget/error_container.dart';

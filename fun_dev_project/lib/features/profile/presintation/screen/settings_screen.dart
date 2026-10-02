@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fun_dev_project/core/widget/custom_app_bar.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 import 'package:fun_dev_project/features/profile/presintation/bottom_sheet/change_password_bottom_sheet.dart';
 import 'package:fun_dev_project/features/profile/presintation/bottom_sheet/update_user_profile_bottom_sheet.dart';
 
@@ -294,7 +294,7 @@ class SettingsScreen extends StatelessWidget {
                   Switch(
                     value: true,
                     onChanged: (value) {},
-                    activeColor: Colors.green,
+                    activeThumbColor: Colors.green,
                   ),
                 ],
               ),

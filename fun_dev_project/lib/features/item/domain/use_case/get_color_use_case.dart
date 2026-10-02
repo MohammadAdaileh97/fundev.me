@@ -1,4 +1,3 @@
-import 'package:fun_dev_project/features/item/domain/entity/size_entity.dart';
 import 'package:fun_dev_project/features/item/domain/repository/items_repository.dart';
 
 import '../entity/color_entity.dart';

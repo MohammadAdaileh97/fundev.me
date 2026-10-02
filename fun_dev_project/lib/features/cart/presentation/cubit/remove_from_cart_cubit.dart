@@ -1,11 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fun_dev_project/features/cart/domain/use_case/add_to_cart_use_case.dart';
 import 'package:fun_dev_project/features/cart/domain/use_case/remove_from_cart_use_case.dart';
 import 'package:fun_dev_project/features/cart/presentation/state/remove_from_cart_state.dart';
 
 import '../../../../core/utl/constant_values.dart';
 import '../../../../core/utl/secure_storage_helper.dart';
-import '../state/add_to_cart_state.dart';
 
 class RemoveFromCartCubit extends Cubit<RemoveFromCartState> {
   RemoveFromCartUseCase removeFromCartUseCase;

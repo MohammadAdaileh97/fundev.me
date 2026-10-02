@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 import 'package:fun_dev_project/features/auth/data/data_source/auth_data_source.dart';
 import 'package:fun_dev_project/features/auth/data/repository/auth_repository_impl.dart';
 import 'package:fun_dev_project/features/auth/domain/use_case/forgot_password_use_case.dart';
@@ -62,25 +62,27 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  AuthRepository authRepository = AuthRepositoryImpl(
+  MyApp({super.key});
+
+  final AuthRepository authRepository = AuthRepositoryImpl(
     authDataSource: AuthDataSourceImpl(),
   );
 
-  HomeRepository homeRepository = HomeRepositoryImp(
+  final HomeRepository homeRepository = HomeRepositoryImp(
     dataSource: HomeDataSourceImp(),
   );
 
-  CategoryRepository categoryRepository = CategoryRepositoryImpl(
+  final CategoryRepository categoryRepository = CategoryRepositoryImpl(
     remoteDataSource: CategoryRemoteDataSourceImpl(),
   );
-  ItemsRepository itemsRepository = ItemsRepositoryImpl(
+  final ItemsRepository itemsRepository = ItemsRepositoryImpl(
     itemsRemoteDataSource: ItemsRemoteDataSourceImpl(),
   );
-  ProfileRepository profileRepository = ProfileRepositoryImpl(
+  final ProfileRepository profileRepository = ProfileRepositoryImpl(
     profileDataSource: ProfileDataSourceImpl(),
   );
 
-  FavRepository favRepository = FavRepositoryImpl(
+  final FavRepository favRepository = FavRepositoryImpl(
     favDataSource: FavDataSourceImpl(),
   );
 

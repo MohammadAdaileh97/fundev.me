@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 
 import '../multiselect/src/multi_dropdown.dart';
 
@@ -25,12 +25,12 @@ class CustomMultiDropdown<T extends Object> extends StatelessWidget {
       closeOnBackButton: true,
       singleSelect: true,
       dropdownItemDecoration: DropdownItemDecoration(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         textColor: Theme.of(context).textTheme.bodyMedium!.color,
       ),
       dropdownDecoration: DropdownDecoration(
         borderRadius: BorderRadius.circular(12),
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
       ),
       fieldDecoration: FieldDecoration(
         showClearIcon: false,

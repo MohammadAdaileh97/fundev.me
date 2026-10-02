@@ -31,6 +31,7 @@ class General {
 
       final sanitizedValue = normalizedValue.replaceAll(
         RegExp(r'[^0-9.\-]'),
+        '',
       );
       if (sanitizedValue.isEmpty || sanitizedValue == '-' || sanitizedValue == '.') {
         return null;
@@ -121,7 +122,8 @@ class General {
   }
 
   static String colorToHexRGB(Color color) {
-    return '#${color.value.toRadixString(16).substring(2).toUpperCase()}';
+    final argb = color.toARGB32().toRadixString(16).padLeft(8, '0');
+    return '#${argb.substring(2).toUpperCase()}';
   }
 
   static bool isTokenExpiringIn2MinutesOrLess({required String token}) {
@@ -133,10 +135,6 @@ class General {
       }
 
       final expirationDate = JwtDecoder.getExpirationDate(token);
-      if (expirationDate == null) {
-        return true;
-      }
-
       final currentTime = DateTime.now();
       final timeLeft = expirationDate.difference(currentTime);
 

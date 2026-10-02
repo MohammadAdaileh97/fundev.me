@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 import 'package:fun_dev_project/core/widget/custom_button.dart';
 
 
@@ -21,7 +21,7 @@ class ErrorContainer extends StatelessWidget {
       ),
       width: MediaQuery.of(context).size.width,
       decoration: ShapeDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.surface,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(16),

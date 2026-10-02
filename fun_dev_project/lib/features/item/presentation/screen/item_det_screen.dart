@@ -16,7 +16,7 @@ import 'package:fun_dev_project/features/item/presentation/cubit/get_size_cubit.
 import 'package:fun_dev_project/features/item/presentation/state/get_color_state.dart';
 import 'package:fun_dev_project/features/item/presentation/state/get_size_state.dart';
 import 'package:fun_dev_project/features/item/presentation/widget/image_widget.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 
 import '../../../../core/widget/custom_circular_progress_indicator.dart';
 import '../../../fav/presentation/cubit/fav_cubit.dart';
@@ -170,18 +170,16 @@ class _ItemDetScreenState extends State<ItemDetScreen> {
                       await context.read<FavCubit>().fav(
                         idItem: widget.itemEntity.id!,
                       );
+                      if (!mounted) return;
+
                       context.read<GetItemsCubit>().changeFav(
                         idItem: widget.itemEntity.id!,
                       );
-
-                      print(widget.itemEntity.isFavorite);
 
                       if (widget.fromFav) {
                         context.read<FavItemCubit>().fetchFavItems();
                         widget.itemEntity.isFavorite =
                             !widget.itemEntity.isFavorite!;
-
-                        print(widget.itemEntity.isFavorite);
                       }
 
                       // if (widget.fromFav) {
@@ -290,9 +288,7 @@ class _ItemDetScreenState extends State<ItemDetScreen> {
                     itemBuilder: (context, index) {
                       return Icon(Icons.star, color: Colors.amber);
                     },
-                    onRatingUpdate: (rating) {
-                      print(rating);
-                    },
+                    onRatingUpdate: (_) {},
                   ),
                   Text(
                     '(${widget.itemEntity.numberRates})',

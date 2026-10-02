@@ -1,7 +1,7 @@
 import 'package:fun_dev_project/features/profile/data/data_source/profile_data_source.dart';
 import 'package:fun_dev_project/features/profile/domain/entity/response_entity.dart';
 
-import 'package:http/src/multipart_file.dart';
+import 'package:http/http.dart' show MultipartFile;
 
 import '../../domain/repository/profile_repository.dart';
 

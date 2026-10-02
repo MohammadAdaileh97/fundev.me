@@ -12,9 +12,6 @@ class ApiClient<T> {
     final response = await http.get(
       Uri.parse("${ConstantValues.baseUrl}$endPoint"),
     );
-    print("${ConstantValues.baseUrl}$endPoint");
-    print(response.statusCode);
-    print(response.body);
     if (response.statusCode == 200) {
       var jsonBody = jsonDecode(response.body);
       return fromJsonT!(jsonBody);
@@ -30,9 +27,6 @@ class ApiClient<T> {
     final response = await http.get(
       Uri.parse("${ConstantValues.baseUrl}$endPoint"),
     );
-    print("${ConstantValues.baseUrl}$endPoint");
-    print(response.statusCode);
-    print(response.body);
     if (response.statusCode == 200) {
       var jsonBody = jsonDecode(response.body);
 
@@ -58,10 +52,6 @@ class ApiClient<T> {
       body: body,
     );
 
-    print("${ConstantValues.baseUrl}$endPoint");
-    print(response.statusCode);
-    print(response.body);
-
     if (response.statusCode == 200 || response.statusCode == 201) {
       var jsonBody = jsonDecode(response.body);
       return fromJsonT!(jsonBody);
@@ -80,9 +70,6 @@ class ApiClient<T> {
       body: jsonEncode(body),
       headers: {'Content-type': 'application/json; charset=UTF-8'},
     );
-    print("${ConstantValues.baseUrl}$endPoint");
-    print(response.statusCode);
-    print(response.body);
     if (response.statusCode == 200) {
       var jsonBody = jsonDecode(response.body);
       return fromJsonT!(jsonBody);
@@ -95,9 +82,6 @@ class ApiClient<T> {
     final response = await http.delete(
       Uri.parse("${ConstantValues.baseUrl}$endPoint"),
     );
-    print("${ConstantValues.baseUrl}$endPoint");
-    print(response.statusCode);
-    print(response.body);
     if (response.statusCode == 200) {
       return true;
     } else {
@@ -128,10 +112,6 @@ class ApiClient<T> {
       }
 
       final response = await http.Response.fromStream(await request.send());
-
-      print("${ConstantValues.baseUrl}$endPoint");
-      print(response.statusCode);
-      print(response.body);
 
       if (response.statusCode == 200) {
         final String decodedResponse = utf8.decode(response.bodyBytes);

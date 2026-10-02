@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 import 'package:fun_dev_project/core/bottom_sheet/msg_bottom_sheet.dart';
 import 'package:fun_dev_project/core/utl/responsive.dart';
 import 'package:fun_dev_project/core/widget/custom_button.dart';
@@ -10,11 +10,29 @@ import 'package:fun_dev_project/core/widget/custom_text_field.dart';
 import '../cubit/change_password_cubit.dart';
 import '../state/change_password_state.dart';
 
-class ChangePasswordBottomSheet extends StatelessWidget {
-  TextEditingController oldPasswordEditingController = TextEditingController();
-  TextEditingController newPasswordEditingController = TextEditingController();
-  TextEditingController confirmPasswordEditingController =
+class ChangePasswordBottomSheet extends StatefulWidget {
+  const ChangePasswordBottomSheet({super.key});
+
+  @override
+  State<ChangePasswordBottomSheet> createState() =>
+      _ChangePasswordBottomSheetState();
+}
+
+class _ChangePasswordBottomSheetState extends State<ChangePasswordBottomSheet> {
+  final TextEditingController oldPasswordEditingController =
       TextEditingController();
+  final TextEditingController newPasswordEditingController =
+      TextEditingController();
+  final TextEditingController confirmPasswordEditingController =
+      TextEditingController();
+
+  @override
+  void dispose() {
+    oldPasswordEditingController.dispose();
+    newPasswordEditingController.dispose();
+    confirmPasswordEditingController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

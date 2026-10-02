@@ -8,7 +8,6 @@ import 'package:image_picker/image_picker.dart';
 import '../state/update_user_image_state.dart';
 
 import 'package:http/http.dart' as http;
-import 'package:path/path.dart';
 
 class UpdateUserImageCubit extends Cubit<UpdateUserImageState> {
   UpdateUserImageUseCase updateUserImageUseCase;
@@ -30,7 +29,7 @@ class UpdateUserImageCubit extends Cubit<UpdateUserImageState> {
       'fileToUpload',
       stream,
       length,
-      filename: basename(file.path),
+      filename: file.name,
     );
 
     await updateUserImageUseCase

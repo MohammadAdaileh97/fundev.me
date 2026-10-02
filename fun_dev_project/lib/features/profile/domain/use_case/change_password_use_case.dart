@@ -1,5 +1,4 @@
 import 'package:fun_dev_project/features/profile/domain/repository/profile_repository.dart';
-import 'package:http/http.dart';
 
 import '../entity/response_entity.dart';
 

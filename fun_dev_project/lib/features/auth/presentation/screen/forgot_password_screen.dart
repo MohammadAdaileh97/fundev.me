@@ -9,7 +9,7 @@ import 'package:fun_dev_project/features/auth/presentation/cubit/forgot_password
 import 'package:fun_dev_project/features/auth/presentation/screen/otp_screen.dart';
 
 import '../../../../core/utl/responsive.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 
 import '../../../../core/widget/custom_text_field.dart';
 import '../state/forgot_password_state.dart';

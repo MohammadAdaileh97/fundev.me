@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fun_dev_project/core/utl/responsive.dart';
 import 'package:fun_dev_project/core/widget/custom_app_bar.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 import 'package:fun_dev_project/features/auth/presentation/cubit/login_cubit.dart';
 import 'package:fun_dev_project/features/auth/presentation/screen/login_screen.dart';
 import 'package:fun_dev_project/features/auth/presentation/state/login_state.dart';

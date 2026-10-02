@@ -1,7 +1,5 @@
 import 'package:fun_dev_project/features/item/domain/entity/item_images_entity.dart';
 
-import '../../domain/entity/color_entity.dart';
-
 class ItemImagesModel extends ItemImagesEntity {
   ItemImagesModel({required super.id, required super.imageUrl});
 

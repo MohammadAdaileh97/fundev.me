@@ -1,21 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 import 'package:fun_dev_project/core/utl/responsive.dart';
 import 'package:fun_dev_project/core/widget/custom_button.dart';
 import 'package:fun_dev_project/core/widget/custom_text_field.dart';
-import 'package:fun_dev_project/features/auth/presentation/cubit/update_password_cubit.dart';
 import 'package:fun_dev_project/features/profile/presintation/cubit/update_user_profile_cubit.dart';
 import 'package:fun_dev_project/features/profile/presintation/state/update_user_profile_state.dart';
 
 import '../../../../core/bottom_sheet/msg_bottom_sheet.dart';
 import '../../../../core/widget/custom_circular_progress_indicator.dart';
 import '../../../auth/presentation/cubit/login_cubit.dart';
-import '../../../auth/presentation/state/update_password_state.dart';
 
-class UpdateUserProfileBottomSheet extends StatelessWidget {
-  TextEditingController nameTextEditingController = TextEditingController();
-  TextEditingController emailTextEditingController = TextEditingController();
+class UpdateUserProfileBottomSheet extends StatefulWidget {
+  const UpdateUserProfileBottomSheet({super.key});
+
+  @override
+  State<UpdateUserProfileBottomSheet> createState() =>
+      _UpdateUserProfileBottomSheetState();
+}
+
+class _UpdateUserProfileBottomSheetState
+    extends State<UpdateUserProfileBottomSheet> {
+  final TextEditingController nameTextEditingController =
+      TextEditingController();
+  final TextEditingController emailTextEditingController =
+      TextEditingController();
+
+  @override
+  void dispose() {
+    nameTextEditingController.dispose();
+    emailTextEditingController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

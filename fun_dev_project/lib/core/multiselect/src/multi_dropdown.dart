@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:fun_dev_project/l10n/app_localizations.dart';
 
 import 'dart:io' if (dart.library.io) 'dart:io';
 
@@ -108,9 +108,8 @@ class MultiDropdown<T extends Object> extends StatefulWidget {
     this.onSelectionChange,
     this.onSearchChange,
     this.closeOnBackButton = false,
-    Key? key,
-  })  : future = null,
-        super(key: key);
+    super.key,
+  }) : future = null;
 
   /// Creates a multiselect dropdown widget with future request.
   ///
@@ -156,9 +155,8 @@ class MultiDropdown<T extends Object> extends StatefulWidget {
     this.onSelectionChange,
     this.onSearchChange,
     this.closeOnBackButton = false,
-    Key? key,
-  })  : items = const [],
-        super(key: key);
+    super.key,
+  }) : items = const [];
 
   /// The list of dropdown items.
   final List<DropdownItem<T>> items;

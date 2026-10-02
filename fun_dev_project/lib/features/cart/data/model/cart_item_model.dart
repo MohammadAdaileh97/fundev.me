@@ -1,4 +1,3 @@
-import 'package:fun_dev_project/features/cart/domain/entity/cart_entity.dart';
 import 'package:fun_dev_project/features/cart/domain/entity/cart_item_entity.dart';
 
 class CartItemModel extends CartItemEntity {

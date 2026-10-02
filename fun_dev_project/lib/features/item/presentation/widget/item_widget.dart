@@ -88,7 +88,6 @@ class ItemWidget extends StatelessWidget {
                       return CustomCircularProgressIndicator();
                     },
                     errorWidget: (context, url, error) {
-                      print("image url - ${itemEntity.imageUrl}");
                       return Icon(Icons.error);
                     },
                   ),
@@ -131,9 +130,7 @@ class ItemWidget extends StatelessWidget {
                             itemBuilder: (context, index) {
                               return Icon(Icons.star, color: Colors.amber);
                             },
-                            onRatingUpdate: (rating) {
-                              print(rating);
-                            },
+                            onRatingUpdate: (_) {},
                           ),
                           Text(
                             '(${itemEntity.numberRates})',

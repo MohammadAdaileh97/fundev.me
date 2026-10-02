@@ -17,14 +17,18 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  late final Timer _navigationTimer;
+
   @override
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 3), () {
+    _navigationTimer = Timer(const Duration(seconds: 3), () {
       SecureStorageHelper()
           .getPrefString(key: ConstantValues.id, defaultValue: "")
           .then((userId) {
+            if (!mounted) return;
+
             if (userId != "") {
               context.read<LoginCubit>().getFromPref();
             }
@@ -38,6 +42,12 @@ class _SplashScreenState extends State<SplashScreen> {
             );
           });
     });
+  }
+
+  @override
+  void dispose() {
+    _navigationTimer.cancel();
+    super.dispose();
   }
 
   @override
