@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class DataScreen extends StatefulWidget {
-  const DataScreen({super.key});
+  const DataScreen({super.key, this.client});
+
+  final http.Client? client;
 
   @override
   State<DataScreen> createState() => _DataScreenState();
@@ -41,11 +43,13 @@ class _DataScreenState extends State<DataScreen> {
   }
 
   getData() async {
-    final response = await http.get(
-      Uri.parse(
-        "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
-      ),
+    final uri = Uri.parse(
+      "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
     );
+    final response =
+        widget.client == null
+            ? await http.get(uri)
+            : await widget.client!.get(uri);
     if (response.statusCode == 200) {
       var jsonBody = jsonDecode(response.body);
       var data = jsonBody["data"];

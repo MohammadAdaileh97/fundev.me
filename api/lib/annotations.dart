@@ -28,14 +28,14 @@ class Annotations {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['source_name'] = this.sourceName;
-    data['source_description'] = this.sourceDescription;
-    data['dataset_name'] = this.datasetName;
-    data['dataset_link'] = this.datasetLink;
-    data['table_id'] = this.tableId;
-    data['topic'] = this.topic;
-    data['subtopic'] = this.subtopic;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['source_name'] = sourceName;
+    data['source_description'] = sourceDescription;
+    data['dataset_name'] = datasetName;
+    data['dataset_link'] = datasetLink;
+    data['table_id'] = tableId;
+    data['topic'] = topic;
+    data['subtopic'] = subtopic;
     return data;
   }
 }

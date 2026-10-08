@@ -5,26 +5,47 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'dart:convert';
+
+import 'package:api/data_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:api/main.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/testing.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('displays nation data returned by the API', (tester) async {
+    final client = MockClient((request) async {
+      expect(request.url.host, 'datausa.io');
+      return http.Response(
+        jsonEncode({
+          'data': [
+            {
+              'ID Nation': '01000US',
+              'Nation': 'United States',
+              'ID Year': 2023,
+              'Year': '2023',
+              'Population': 334914895,
+              'Slug Nation': 'united-states',
+            },
+          ],
+          'source': [
+            {
+              'measures': ['Population'],
+              'annotations': null,
+              'name': 'Test',
+            },
+          ],
+        }),
+        200,
+      );
+    });
+    addTearDown(client.close);
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    await tester.pumpWidget(MaterialApp(home: DataScreen(client: client)));
+    await tester.pumpAndSettle();
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('United States'), findsOneWidget);
+    expect(find.text('united-states'), findsOneWidget);
   });
 }

@@ -25,13 +25,13 @@ class DataModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['ID Nation'] = this.iDNation;
-    data['Nation'] = this.nation;
-    data['ID Year'] = this.iDYear;
-    data['Year'] = this.year;
-    data['Population'] = this.population;
-    data['Slug Nation'] = this.slugNation;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['ID Nation'] = iDNation;
+    data['Nation'] = nation;
+    data['ID Year'] = iDYear;
+    data['Year'] = year;
+    data['Population'] = population;
+    data['Slug Nation'] = slugNation;
     return data;
   }
 }

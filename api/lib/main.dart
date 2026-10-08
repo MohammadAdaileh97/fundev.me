@@ -1,6 +1,4 @@
-import 'package:api/country_screen.dart';
 import 'package:api/data_screen.dart';
-import 'package:api/fact_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
