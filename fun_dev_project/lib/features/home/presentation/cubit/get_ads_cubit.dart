@@ -15,7 +15,7 @@ class GetAdsCubit extends Cubit<GetAdsState> {
         emit(GetAdsStateSuccess(ads: value));
       },
       onError: (error) {
-        emit(GetAdsStateError(message: error));
+        emit(GetAdsStateError(message: error.toString()));
       },
     );
   }

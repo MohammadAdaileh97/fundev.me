@@ -27,197 +27,198 @@ class AppLocalizationsAr extends AppLocalizations {
   String get forgotYourPassword => 'نسيت كلمة المرور؟';
 
   @override
-  String get orLoginWithSocialAccount => 'او قم بتسجيل الدخول باستخدام حساب';
+  String get orLoginWithSocialAccount => 'أو سجّل الدخول باستخدام حساب اجتماعي';
 
   @override
-  String get register => 'Register';
+  String get register => 'التسجيل';
 
   @override
-  String get or_login_with_social_account => 'Or login with social account';
+  String get or_login_with_social_account =>
+      'أو سجّل الدخول باستخدام حساب اجتماعي';
 
   @override
-  String get signup => 'Sign up';
+  String get signup => 'إنشاء حساب';
 
   @override
-  String get name => 'Name';
+  String get name => 'الاسم';
 
   @override
-  String get nameIsRequired => 'Name Is Required';
+  String get nameIsRequired => 'الاسم مطلوب';
 
   @override
-  String get alreadyHaveAnAccount => 'Already have an account?';
+  String get alreadyHaveAnAccount => 'لديك حساب بالفعل؟';
 
   @override
-  String get forgotPassword => 'Forgot Password';
+  String get forgotPassword => 'نسيت كلمة المرور';
 
   @override
   String
   get pleaseEnterYourEmailAddressYouWillReceiveALinkToCreateANewPasswordViaEmail =>
-      'Please, enter your email address. You will receive a link to create a new password via email.';
+      'يرجى إدخال بريدك الإلكتروني. ستصلك رسالة تتضمن رابطًا لإنشاء كلمة مرور جديدة.';
 
   @override
-  String get pleaseEnterYourOtp => 'Please, enter your Otp';
+  String get pleaseEnterYourOtp => 'يرجى إدخال رمز التحقق';
 
   @override
-  String get send => 'Send';
+  String get send => 'إرسال';
 
   @override
-  String get ok => 'ok';
+  String get ok => 'حسنًا';
 
   @override
-  String get somethingWentWrong => 'Something went wrong';
+  String get somethingWentWrong => 'حدث خطأ ما';
 
   @override
-  String get otp => 'otp';
+  String get otp => 'رمز التحقق';
 
   @override
-  String get pleaseEnterValidOtp => 'Please, enter valid otp';
+  String get pleaseEnterValidOtp => 'يرجى إدخال رمز تحقق صالح';
 
   @override
-  String get newPassword => 'New Password';
+  String get newPassword => 'كلمة المرور الجديدة';
 
   @override
-  String get pleaseEnterTheNewPassword => 'Please, enter the new password';
+  String get pleaseEnterTheNewPassword => 'يرجى إدخال كلمة المرور الجديدة';
 
   @override
-  String get update => 'update';
+  String get update => 'تحديث';
 
   @override
-  String get home => 'Home';
+  String get home => 'الرئيسية';
 
   @override
-  String get shop => 'Shop';
+  String get shop => 'المتجر';
 
   @override
-  String get bag => 'Bag';
+  String get bag => 'السلة';
 
   @override
-  String get favorites => 'Favorites';
+  String get favorites => 'المفضلة';
 
   @override
-  String get profile => 'Profile';
+  String get profile => 'الملف الشخصي';
 
   @override
-  String get myProfile => 'My profile';
+  String get myProfile => 'ملفي الشخصي';
 
   @override
-  String get myOrders => 'My orders';
+  String get myOrders => 'طلباتي';
 
   @override
-  String get shippingAddresses => 'Shipping addresses';
+  String get shippingAddresses => 'عناوين الشحن';
 
   @override
-  String get paymentMethods => 'Payment methods';
+  String get paymentMethods => 'طرق الدفع';
 
   @override
-  String get promoCodes => 'Promo Codes';
+  String get promoCodes => 'الرموز الترويجية';
 
   @override
-  String get myReviews => 'My reviews';
+  String get myReviews => 'تقييماتي';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'الإعدادات';
 
   @override
-  String get logout => 'Logout';
+  String get logout => 'تسجيل الخروج';
 
   @override
   String get something_went_wrong_please_try_again =>
-      'Something went wrong, please try again';
+      'حدث خطأ ما، يرجى المحاولة مرة أخرى';
 
   @override
-  String get try_again => 'Try Again';
+  String get try_again => 'حاول مرة أخرى';
 
   @override
-  String get categories => 'Categories';
+  String get categories => 'الفئات';
 
   @override
-  String get viewAllItems => 'VIEW ALL ITEMS';
+  String get viewAllItems => 'عرض جميع العناصر';
 
   @override
-  String get chooseCategory => 'Choose category';
+  String get chooseCategory => 'اختر فئة';
 
   @override
-  String get chooseAnOption => 'Choose an option';
+  String get chooseAnOption => 'اختر أحد الخيارات';
 
   @override
-  String get camera => 'Camera';
+  String get camera => 'الكاميرا';
 
   @override
-  String get gallery => 'Gallery';
+  String get gallery => 'معرض الصور';
 
   @override
-  String get personalInformation => 'Personal Information';
+  String get personalInformation => 'المعلومات الشخصية';
 
   @override
-  String get fullName => 'Full name';
+  String get fullName => 'الاسم الكامل';
 
   @override
-  String get change => 'Change';
+  String get change => 'تغيير';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'الإشعارات';
 
   @override
-  String get sales => 'Sales';
+  String get sales => 'التخفيضات';
 
   @override
-  String get newArrivals => 'New arrivals';
+  String get newArrivals => 'وصل حديثًا';
 
   @override
-  String get deliveryStatusChanges => 'Delivery status changes';
+  String get deliveryStatusChanges => 'تغييرات حالة التوصيل';
 
   @override
-  String get passwordChange => 'Password change';
+  String get passwordChange => 'تغيير كلمة المرور';
 
   @override
-  String get oldPassword => 'Old password';
+  String get oldPassword => 'كلمة المرور القديمة';
 
   @override
-  String get repeatNewPassword => 'Repeat New Password';
+  String get repeatNewPassword => 'أعد إدخال كلمة المرور الجديدة';
 
   @override
-  String get savePassword => 'Save Password';
+  String get savePassword => 'حفظ كلمة المرور';
 
   @override
-  String get updateUserProfile => 'Update user profile';
+  String get updateUserProfile => 'تحديث الملف الشخصي';
 
   @override
-  String get save => 'save';
+  String get save => 'حفظ';
 
   @override
-  String get oldPasswordErrorMsg => 'Old password is required';
+  String get oldPasswordErrorMsg => 'كلمة المرور القديمة مطلوبة';
 
   @override
-  String get newPasswordErrorMsg => 'New password is required';
+  String get newPasswordErrorMsg => 'كلمة المرور الجديدة مطلوبة';
 
   @override
-  String get confirmPasswordErrorMsg => 'Passwords do not match';
+  String get confirmPasswordErrorMsg => 'كلمتا المرور غير متطابقتين';
 
   @override
-  String get addToCart => 'ADD TO CART';
+  String get addToCart => 'أضف إلى السلة';
 
   @override
-  String get shippingInfo => 'Shipping info';
+  String get shippingInfo => 'معلومات الشحن';
 
   @override
-  String get support => 'Support';
+  String get support => 'الدعم';
 
   @override
-  String get youCanAlsoLikeThis => 'You can also like this';
+  String get youCanAlsoLikeThis => 'قد يعجبك أيضًا';
 
   @override
-  String get items => 'items';
+  String get items => 'العناصر';
 
   @override
-  String get search => 'search';
+  String get search => 'بحث';
 
   @override
-  String get noItemFound => 'No item found';
+  String get noItemFound => 'لم يتم العثور على عناصر';
 
   @override
-  String get size => 'Size';
+  String get size => 'المقاس';
 
   @override
-  String get color => 'Color';
+  String get color => 'اللون';
 }

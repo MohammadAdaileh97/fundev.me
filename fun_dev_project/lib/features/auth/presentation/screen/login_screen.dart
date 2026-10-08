@@ -30,6 +30,10 @@ class _LoginScreenState extends State<LoginScreen> {
   bool showErrorPassword = false;
   bool showErrorEmail = false;
 
+  void _loginWithSocialAccount(BuildContext context, String provider) {
+    context.read<LoginCubit>().loginWithSocialAccount(provider: provider);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -214,9 +218,15 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/google.png"),
+                GestureDetector(
+                  onTap: () => _loginWithSocialAccount(context, 'Google'),
+                  child: Image.asset("assets/images/google.png"),
+                ),
                 SizedBox(width: responsiveWidth(context, 16)),
-                Image.asset("assets/images/facebook.png"),
+                GestureDetector(
+                  onTap: () => _loginWithSocialAccount(context, 'Facebook'),
+                  child: Image.asset("assets/images/facebook.png"),
+                ),
               ],
             ),
           ],

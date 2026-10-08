@@ -11,6 +11,16 @@ class LoginCubit extends Cubit<LoginState> {
 
   LoginCubit({required this.loginUseCase}) : super(LoginStateInitial());
 
+  loginWithSocialAccount({required String provider}) async {
+    final providerName = provider.trim().toLowerCase();
+    final email =
+        providerName == 'google'
+            ? 'google-user@demo.com'
+            : 'facebook-user@demo.com';
+
+    await login(email: email, password: 'social-login');
+  }
+
   login({required String email, required String password}) async {
     emit(LoginStateLoading());
     await loginUseCase

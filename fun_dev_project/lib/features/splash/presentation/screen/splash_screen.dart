@@ -23,24 +23,32 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    _navigationTimer = Timer(const Duration(seconds: 3), () {
-      SecureStorageHelper()
-          .getPrefString(key: ConstantValues.id, defaultValue: "")
-          .then((userId) {
-            if (!mounted) return;
+    _navigationTimer = Timer(const Duration(seconds: 3), () async {
+      try {
+        final userId = await SecureStorageHelper().getPrefString(
+          key: ConstantValues.id,
+          defaultValue: "",
+        );
 
-            if (userId != "") {
-              context.read<LoginCubit>().getFromPref();
-            }
+        if (!mounted) return;
 
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder:
-                    (context) => userId == "" ? LoginScreen() : MainScreen(),
-              ),
-            );
-          });
+        if (userId != "") {
+          context.read<LoginCubit>().getFromPref();
+        }
+
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => userId == "" ? LoginScreen() : MainScreen(),
+          ),
+        );
+      } catch (_) {
+        if (!mounted) return;
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => LoginScreen()),
+        );
+      }
     });
   }
 
